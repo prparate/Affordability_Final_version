@@ -1,0 +1,213 @@
+[
+  {
+    "environments": "Test:migrator-develop",
+    "variables": [
+      {
+        "key": "POSTGRES_HOST",
+        "value": "pf-dev-uk-core-db.postgres.database.azure.com",
+        "secured": false
+      },
+      {
+        "key": "POSTGRES_USER",
+        "value": "env:DEV_POSTGRES_USER",
+        "secured": true
+      },
+      {
+        "key": "POSTGRES_PASSWORD",
+        "value": "env:DEV_POSTGRES_PASSWORD",
+        "secured": true
+      }
+    ]
+  },
+  {
+    "environments": "Staging:migrator-staging",
+    "variables": [
+      {
+        "key": "POSTGRES_HOST",
+        "value": "pf-staging-uk-core-db.postgres.database.azure.com",
+        "secured": false
+      },
+      {
+        "key": "POSTGRES_USER",
+        "value": "env:STAGING_POSTGRES_USER",
+        "secured": true
+      },
+      {
+        "key": "POSTGRES_PASSWORD",
+        "value": "env:STAGING_POSTGRES_PASSWORD",
+        "secured": true
+      }
+    ]
+  },
+  {
+    "environments": "Production:migrator-production",
+    "variables": [
+      {
+        "key": "POSTGRES_HOST",
+        "value": "pf-prod-uk-core-db.postgres.database.azure.com",
+        "secured": false
+      },
+      {
+        "key": "POSTGRES_USER",
+        "value": "env:PROD_POSTGRES_USER",
+        "secured": true
+      },
+      {
+        "key": "POSTGRES_PASSWORD",
+        "value": "env:PROD_POSTGRES_PASSWORD",
+        "secured": true
+      }
+    ]
+  },
+
+  {
+    "environments": "Test:develop",
+    "variables": [
+      {
+        "key": "HOST",
+        "value": "be-affordability.internal.dev.premfina.com",
+        "secured": false
+      },
+      {
+        "key": "NAME",
+        "value": "be-affordability-dev",
+        "secured": false
+      },
+      {
+        "key": "AZURE_PRINCIPAL_ID",
+        "value": "env:DEV_AZURE_PRINCIPAL_ID",
+        "secured": true
+      },
+      {
+        "key": "AZURE_PRINCIPAL_PASSWORD",
+        "value": "env:DEV_AZURE_PRINCIPAL_PASSWORD",
+        "secured": true
+      },
+      {
+        "key": "AZURE_RESOURCE_GROUP",
+        "value": "env:DEV_AZURE_RESOURCE_GROUP",
+        "secured": false
+      },
+      {
+        "key": "AZURE_SERVICE_NAME",
+        "value": "env:DEV_AZURE_SERVICE_NAME",
+        "secured": false
+      },
+      {
+        "key": "KUBE_CONTEXT",
+        "value": "env:DEV_KUBE_CONTEXT",
+        "secured": false
+      },
+      {
+        "key": "REPLICA",
+        "value": "1",
+        "secured": false
+      },
+      {
+        "key": "NAMESPACE",
+        "value": "env:DEV_NAMESPACE",
+        "secured": false
+      }
+    ]
+  },
+  {
+    "environments": "Staging:staging",
+    "variables": [
+      {
+        "key": "HOST",
+        "value": "be-affordability.internal.staging.premfina.com",
+        "secured": false
+      },
+      {
+        "key": "NAME",
+        "value": "be-affordability-staging",
+        "secured": false
+      },
+      {
+        "key": "AZURE_PRINCIPAL_ID",
+        "value": "env:STAGING_AZURE_PRINCIPAL_ID",
+        "secured": true
+      },
+      {
+        "key": "AZURE_PRINCIPAL_PASSWORD",
+        "value": "env:STAGING_AZURE_PRINCIPAL_PASSWORD",
+        "secured": true
+      },
+      {
+        "key": "AZURE_RESOURCE_GROUP",
+        "value": "env:STAGING_AZURE_RESOURCE_GROUP",
+        "secured": false
+      },
+      {
+        "key": "AZURE_SERVICE_NAME",
+        "value": "env:STAGING_AZURE_SERVICE_NAME",
+        "secured": false
+      },
+      {
+        "key": "KUBE_CONTEXT",
+        "value": "env:STAGING_KUBE_CONTEXT",
+        "secured": false
+      },
+      {
+        "key": "REPLICA",
+        "value": "2",
+        "secured": false
+      },
+      {
+        "key": "NAMESPACE",
+        "value": "env:STAGING_NAMESPACE",
+        "secured": false
+      }
+    ]
+  },
+  {
+    "environments": "Production:production",
+    "variables": [
+      {
+        "key": "HOST",
+        "value": "be-affordability.internal.premfina.com",
+        "secured": false
+      },
+      {
+        "key": "NAME",
+        "value": "be-affordability-prod",
+        "secured": false
+      },
+      {
+        "key": "AZURE_PRINCIPAL_ID",
+        "value": "env:PROD_AZURE_PRINCIPAL_ID",
+        "secured": true
+      },
+      {
+        "key": "AZURE_PRINCIPAL_PASSWORD",
+        "value": "env:PROD_AZURE_PRINCIPAL_PASSWORD",
+        "secured": true
+      },
+      {
+        "key": "AZURE_RESOURCE_GROUP",
+        "value": "env:PROD_AZURE_RESOURCE_GROUP",
+        "secured": false
+      },
+      {
+        "key": "AZURE_SERVICE_NAME",
+        "value": "env:PROD_AZURE_SERVICE_NAME",
+        "secured": false
+      },
+      {
+        "key": "KUBE_CONTEXT",
+        "value": "env:PROD_KUBE_CONTEXT",
+        "secured": false
+      },
+      {
+        "key": "REPLICA",
+        "value": "2",
+        "secured": false
+      },
+      {
+        "key": "NAMESPACE",
+        "value": "env:PROD_NAMESPACE",
+        "secured": false
+      }
+    ]
+  }
+]

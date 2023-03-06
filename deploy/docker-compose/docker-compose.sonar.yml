@@ -1,0 +1,15 @@
+version: "3"
+services:
+  sonar_custom_jdk:
+    build: 
+      context: ../..
+      dockerfile: build/docker/Dockerfile.sonar
+    volumes:
+      - sonar_data:/opt/sonarqube/data
+      - sonar_logs:/opt/sonarqube/logs
+    ports:
+      - "9000:9000"
+
+volumes:
+  sonar_data:
+  sonar_logs:

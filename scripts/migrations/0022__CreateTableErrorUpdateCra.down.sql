@@ -1,0 +1,1 @@
+DROP TABLE IF  EXISTS error_cra_update

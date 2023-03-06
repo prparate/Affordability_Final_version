@@ -1,0 +1,23 @@
+{
+  "status": 200,
+  "name": "be__data_fetcher_oracle",
+  "version_api": "1",
+  "version_code": "1.3.0",
+  "hostname": "http://be-data-fetcher-oracle.internal.dev.premfina.com",
+  "path": "/v1/clients/TPFUAT2/queries/affordability_customer_data_for_regulation/execute",
+  "uuid_instance": null,
+  "id_request": 14551,
+  "timestamp_request": "2022-08-12T12:30:00.678652Z",
+  "messages": [],
+  "data": [
+    {
+      "agreement_number": "000039574",
+      "trader_code": "X",
+      "trader_type": "Limited Company",
+      "personal_or_corporate": "C",
+      "advance": 2600,
+      "number_of_partners": 1
+    }
+  ],
+  "version_core": "2.16.4"
+}

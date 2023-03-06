@@ -1,0 +1,59 @@
+version: '3.1'
+services:
+  affordability_app:
+    image: maven:3.8.7
+    working_dir: /app
+    volumes:
+      - ./../../:/app
+      - repo_volume:/root/.m2
+    depends_on:
+      - migrate
+    env_file: ../../.env.dist
+    ports:
+      - "${PF_HOST_PORT}:${PF_HOST_PORT}"
+    command:
+        - "mvn"
+        - "spring-boot:run"
+    networks:
+      - premfina
+      - affordability
+
+  postgres:
+    image: postgres:11-bullseye
+    container_name: affordability_postgres
+    environment:
+      POSTGRES_DB: affordability
+      POSTGRES_USER: ${PF_DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${PF_DATABASE_PASSWORD}
+    ports:
+      - "${PF_DATABASE_PORT}:5432"
+    healthcheck:
+      test: pg_isready -U ${PF_DATABASE_USERNAME} -d ${PF_DATABASE_PASSWORD}
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    networks:
+      - affordability
+
+  migrate:
+    image: migrate/migrate
+    container_name: affordability_migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./../../scripts/migrations:/database
+    command:
+      [ "-path", "/database", "-database",  "postgres://${PF_DATABASE_USERNAME}:${PF_DATABASE_PASSWORD}@postgres:${PF_DATABASE_PORT}/affordability?sslmode=disable", "up" ]
+    networks:
+      - affordability
+
+networks:
+  premfina:
+    external: true
+  affordability:
+    driver: bridge
+
+volumes:
+  repo_volume:

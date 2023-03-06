@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "version_api": "v1",
+  "version_code": "v1.0.0",
+  "hostname": "http://10.6.0.5:8027/",
+  "path": "/v1/credit/check",
+  "uuid_instance": "14303a06-fc77-4ea4-a5b0-9234d2c4516e",
+  "id_request": 42282,
+  "datetime_request": "2022-06-07 16:37:26"
+}

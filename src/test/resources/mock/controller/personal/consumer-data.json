@@ -1,0 +1,389 @@
+{
+  "status": 200,
+  "version_api": "v1",
+  "version_code": "v1.0.0",
+  "hostname": "http://10.6.0.5:8027/",
+  "path": "/v1/affordability/check",
+  "uuid_instance": "14303a06-fc77-4ea4-a5b0-9234d2c4516e",
+  "id_request": 11403,
+  "datetime_request": "2022-07-08 09:14:50",
+  "data": {
+    "reference_number": {
+      "title": "Check Reference Number",
+      "value": "6F5MGAGNLW"
+    },
+    "SPEDI": {
+      "title": "Effective Disposable Income (SPEDI)",
+      "value": 872
+    },
+    "SPM88": {
+      "title": "Family Economic Unit CATO Warning Flag (SPM88)",
+      "value": -2
+    },
+    "SPI52": {
+      "title": "Monthly Payment (incl. mortgage) as % of Net Monthly Income (SPI52)",
+      "value": 998
+    },
+    "SPN91": {
+      "title": "Preferred FEU Net Monthly Income Estimate (SPN91)",
+      "value": 1301
+    },
+    "SPEDI03": {
+      "title": "EDI Estimated Net Monthly Income (SPEDI03)",
+      "value": 3039
+    },
+    "SPEDI04": {
+      "title": "Monthly Mortgage or Rent Amount (SPEDI04)",
+      "value": 653
+    },
+    "SPEDI05": {
+      "title": "Basic Essential Expenditure (SPEDI05)",
+      "value": 975
+    },
+    "SPEDI06": {
+      "title": "Basic Quality of Living Costs (SPEDI06)",
+      "value": 539
+    },
+    "SPEDI08": {
+      "title": "Monthly Credit Commitments (SPEDI08)",
+      "value": 0
+    },
+    "address_swapped": {
+      "title": "Address Swapped",
+      "value": "No"
+    },
+    "address_auto_fixed": {
+      "title": "Address Auto-Fixed",
+      "value": "No"
+    },
+    "system_request_raw": {
+      "title": "Raw Request",
+      "value": {
+        "Submission": {
+          "Applicants": [
+            {
+              "ApplicantIdentifier": 1,
+              "Person": {
+                "Title": "MR",
+                "Forename": "GRAHAM",
+                "MiddleName": "",
+                "Surname": "DAVID TRUEMAN",
+                "DateOfBirth": "1943-03-11"
+              },
+              "ApplicantData": {
+                "BankDetails": {
+                  "BankSortCode": "",
+                  "BankAccountNumber": "",
+                  "CurrentAccountHeld": ""
+                },
+                "EmploymentDetails": {
+                  "GrossAnnualIncome": "50000"
+                }
+              }
+            }
+          ],
+          "Locations": [
+            {
+              "LocationIdentifier": 1,
+              "UKLocation": {
+                "Flat": "",
+                "HouseName": "",
+                "HouseNumber": "22",
+                "Street": "Patterdale Drive",
+                "District": "",
+                "PostTown": "York",
+                "County": "",
+                "Postcode": "YO305TW",
+                "Country": "UK"
+              }
+            }
+          ],
+          "Residencies": [
+            {
+              "ApplicantIdentifier": 1,
+              "LocationIdentifier": 1,
+              "TimeAt": {
+                "Years": "",
+                "Months": ""
+              },
+              "Type": "1",
+              "CanBeSearched": "Y"
+            }
+          ],
+          "Application": {
+            "ApplicationType": "PL",
+            "ProductType": "Affordability",
+            "Amount": "1",
+            "SearchConsent": true
+          },
+          "ClientData": {
+            "ClientBranchNumber": "",
+            "ClientRef": "",
+            "JobNumber": "",
+            "ClientAccountNumber": "J3437",
+            "ExperianReference": ""
+          },
+          "ThirdPartyData": {
+            "OptOut": "N",
+            "TransientAssociation": "N",
+            "HHOAllowed": "",
+            "OptOutValidCutOff": "N"
+          },
+          "Options": {
+            "ProductCode": "",
+            "FullFBLRequired": true,
+            "AuthenticatePlusRequired": false,
+            "DetectRequired": false,
+            "TestDatabase": "A"
+          }
+        }
+      }
+    },
+    "system_response_raw": {
+      "title": "Raw Response",
+      "value": {
+        "Response": {
+          "Applicants": [
+            {
+              "ApplicantIdentifier": 1,
+              "Person": {
+                "Title": "MR",
+                "Forename": "GRAHAM",
+                "MiddleName": "",
+                "Surname": "DAVID TRUEMAN",
+                "Suffix": "",
+                "Gender": "",
+                "DateOfBirth": "1943-03-11",
+                "FormattedName": "Mr G David Trueman",
+                "Age": {
+                  "Years": "79",
+                  "Months": "03"
+                }
+              }
+            }
+          ],
+          "Locations": [
+            {
+              "LocationIdentifier": 1,
+              "UKLocation": {
+                "HouseNumber": "22",
+                "Street": "PATTERDALE DRIVE",
+                "PostTown": "YORK",
+                "Postcode": "YO305TW"
+              }
+            }
+          ],
+          "Residencies": [
+            {
+              "ApplicantIdentifier": 1,
+              "LocationIdentifier": 1,
+              "Type": "C",
+              "VRConfirmation": {
+                "Confirmed": "Y",
+                "YrsERSP": "29",
+                "YrsERSF": "29"
+              },
+              "CanBeSearched": "Y"
+            }
+          ],
+          "ConsumerSummary": {
+            "CATO": {
+              "SPEDI02": "D",
+              "SPEDI03": 3039,
+              "SPEDI04": 653,
+              "SPEDI05": 975,
+              "SPEDI06": 539,
+              "SPEDI07": 679,
+              "SPEDI08": 0,
+              "SPEDI09": "N",
+              "SPI42": 998,
+              "SPI43": 998,
+              "SPI44": 998,
+              "SPI45": 998,
+              "SPI46": 50000,
+              "SPI47": 0,
+              "SPI48": 0,
+              "SPI49": 0,
+              "SPI50": 998,
+              "SPI51": 0,
+              "SPI52": 998,
+              "SPI53": 998,
+              "SPJ54": -2,
+              "SPJ55": -2,
+              "SPJ56": -2,
+              "SPJ58": -2,
+              "SPJ60": -2,
+              "SPJ61": -2,
+              "SPJ62": -2,
+              "SPJ63": -2,
+              "SPJ65": -2,
+              "SPK69": -9999999,
+              "SPK70": -9999999,
+              "SPK71": -9999999,
+              "SPK72": -9999999,
+              "SPK73": -9999999,
+              "SPK74": -9999999,
+              "SPK75": -9999999,
+              "SPK76": -9999999,
+              "SPK77": -9999999,
+              "SPL78": -9999999,
+              "SPL79": -9999999,
+              "SPL80": -9999999,
+              "SPL81": -99,
+              "SPL82": -9999999,
+              "SPL83": -9999999,
+              "SPL84": -9999999,
+              "SPL85": -99,
+              "SPM86": -2,
+              "SPM87": -2,
+              "SPM88": -2,
+              "SPN89": 18301,
+              "SPN90": 15612,
+              "SPN91": 1301,
+              "SPN92": "A",
+              "SPEDI": "872"
+            },
+            "PremiumValueData": {
+              "CII": {
+                "NDSPCII": -2,
+                "NDSPACII": -2
+              },
+              "AdditDelphiBlocks": {
+                "Utilisationblock": {
+                  "SPA01": -2,
+                  "SPA02": -2,
+                  "SPA03": -2,
+                  "SPA04": -2,
+                  "SPA05": -2,
+                  "SPA06": -2,
+                  "SPA07": -2,
+                  "SPA08": -2,
+                  "SPA09": -2,
+                  "SPA10": -2,
+                  "SPB111": -2,
+                  "SPB112": -2,
+                  "SPB113": -2,
+                  "SPB114": -2,
+                  "SPB115": -2,
+                  "SPB116": -2,
+                  "SPB117": -2,
+                  "SPB218": 9999,
+                  "SPB219": 9999,
+                  "SPB220": 9999,
+                  "SPB221": 9999,
+                  "SPB322": -2,
+                  "SPB323": -2,
+                  "SPC24": "N",
+                  "SPD25": 0,
+                  "SPE126": -2,
+                  "SPE127": -2,
+                  "SPE128": -2,
+                  "SPF129": -2,
+                  "SPF130": -2,
+                  "SPF131": -2,
+                  "SPF232": -2,
+                  "SPF233": -2,
+                  "SPF334": 9999,
+                  "SPF335": 9999,
+                  "SPF336": 9999,
+                  "SPG37": -2,
+                  "SPG38": -2,
+                  "SPH39": 0,
+                  "SPH40": 0,
+                  "SPH41": 0,
+                  "SPCIICHECKDIGIT": 0,
+                  "SPAA01": -2,
+                  "SPAA02": -2,
+                  "SPAA03": -2,
+                  "SPAA04": -2,
+                  "SPAA05": -2,
+                  "SPAA06": -2,
+                  "SPAA07": -2,
+                  "SPAA08": -2,
+                  "SPAA09": -2,
+                  "SPAA10": -2,
+                  "SPAB111": -2,
+                  "SPAB112": -2,
+                  "SPAB113": -2,
+                  "SPAB114": -2,
+                  "SPAB115": -2,
+                  "SPAB116": -2,
+                  "SPAB117": -2,
+                  "SPAB218": 9999,
+                  "SPAB219": 9999,
+                  "SPAB220": 9999,
+                  "SPAB221": 9999,
+                  "SPAB322": -2,
+                  "SPAB323": -2,
+                  "SPAC24": "N",
+                  "SPAD25": 0,
+                  "SPAE126": -2,
+                  "SPAE127": -2,
+                  "SPAE128": -2,
+                  "SPAF129": -2,
+                  "SPAF130": -2,
+                  "SPAF131": -2,
+                  "SPAF232": -2,
+                  "SPAF233": -2,
+                  "SPAF334": 9999,
+                  "SPAF335": 9999,
+                  "SPAF336": 9999,
+                  "SPAG37": -2,
+                  "SPAG38": -2,
+                  "SPAH39": 0,
+                  "SPAH40": 0,
+                  "SPAH41": 0,
+                  "SPACIICHECKDIGIT": 0
+                }
+              }
+            }
+          },
+          "ClientData": {
+            "ClientAccountNumber": "J3437",
+            "ClientBranchNumber": "",
+            "ClientRef": "",
+            "JobNumber": "",
+            "ExperianReference": "6F5MGAGNLW"
+          },
+          "ThirdPartyData": {
+            "OutcomeCode": "01",
+            "OptOut": "N",
+            "TransientAssociation": "N",
+            "OptOutValidCutOff": "N"
+          }
+        },
+        "Metrics": {
+          "ProcessStarted": "2022-06-30T10:17:19.500Z",
+          "ProcessEnded": "2022-06-30T10:17:20.094Z",
+          "TimeTakeninMs": 594,
+          "Steps": [
+            {
+              "Name": "Authorisation",
+              "TimeTakeninMs": 14
+            },
+            {
+              "Name": "Validation",
+              "TimeTakeninMs": 1
+            },
+            {
+              "Name": "TransformationIn",
+              "TimeTakeninMs": 3
+            },
+            {
+              "Name": "ServiceCall",
+              "TimeTakeninMs": 568
+            },
+            {
+              "Name": "TransformationOut",
+              "TimeTakeninMs": 5
+            }
+          ]
+        }
+      }
+    },
+    "system_response_from_cache": {
+      "title": "Data Was Loaded from Cache",
+      "value": "Yes"
+    }
+  }
+}

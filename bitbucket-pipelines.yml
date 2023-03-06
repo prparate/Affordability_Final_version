@@ -1,0 +1,176 @@
+image: maven:3.8.4
+
+definitions:
+
+  services:
+    docker:
+      memory: 2048
+
+  caches:
+    npm: $HOME/.npm
+    cypress: $HOME/.cache/Cypress
+
+  images:
+    - image: &baseMigrator
+        name: premfinaukcontainerregistry.azurecr.io/docker/backend/pipeline_base_migrator:1.7.2
+        username: $AZURE_REGISTRY_USERNAME
+        password: $AZURE_REGISTRY_PASSWORD
+    - image: &baseGo
+        name: premfinaukcontainerregistry.azurecr.io/docker/backend/pipeline_base_go:1.7.1
+        username: $AZURE_REGISTRY_USERNAME
+        password: $AZURE_REGISTRY_PASSWORD
+    - image: &baseAzure
+          name: premfinaukcontainerregistry.azurecr.io/docker/backend/pipeline_base_azure:1.6.0
+          username: $AZURE_REGISTRY_USERNAME
+          password: $AZURE_REGISTRY_PASSWORD
+
+  steps:
+    
+    #CI steps
+    - step: &compile-and-test
+        name: Build and Test
+        caches:
+          - maven
+        script:
+          - mvn clean package
+        artifacts:
+          - target/**
+          - scripts/**
+    - step: &quality-gate
+        name: Quality Gate
+        caches:
+          - maven
+        script:
+          - /bin/bash ./scripts/bash/quality-gate.sh
+    - step: &docker-image
+        name: Create and Push Docker Image
+        image:
+          name: premfinaukcontainerregistry.azurecr.io/docker/backend/pipeline_base_azure:1.6.0
+          username: $AZURE_REGISTRY_USERNAME
+          password: $AZURE_REGISTRY_PASSWORD
+        script:
+          - /bin/bash ./scripts/bash/pipeline-docker-push.sh
+        services:
+          - docker
+
+    
+    #Test steps
+    - step: &run-acceptance-tests
+        name: Run Acceptance Tests
+        runs-on: 
+          - 'tests.dev'
+          - 'self.hosted'
+          - 'linux'
+        image: cypress/browsers:node12.14.1-chrome85-ff81
+        caches:
+          - node
+        script:
+          - /bin/bash ./scripts/bash/run-acceptance-tests.sh
+    
+    
+    #Update enviroment steps (pipeline envs)
+    - step: &setEnvVariablesDev
+        name: Set Develop Deployment Variables
+        image: *baseGo
+        script:
+          - /bin/bash ./scripts/bash/set-deployment-variables.sh develop,migrator-develop
+    - step: &setEnvVariablesStaging
+        name: Set Staging Deployment Variables
+        image: *baseGo
+        script:
+          - /bin/bash ./scripts/bash/set-deployment-variables.sh staging,migrator-staging
+    - step: &setEnvVariablesProd
+        name: Set Production Deployment Variables
+        image: *baseGo
+        script:
+          - /bin/bash ./scripts/bash/set-deployment-variables.sh production,migrator-production
+    
+    
+    #CD steps
+    - step: &execute-migration-dev
+        name: Migration DEV
+        image: *baseMigrator
+        runs-on: [ self.hosted, migrator.postgres.dev ]
+        deployment: migrator-develop
+        script:
+          - migrate -path ./scripts/migrations/ -database "postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_HOST:5432/affordability?sslmode=require" up
+        services:
+          - docker
+    - step: &execute-migration-staging
+        name: Migration STAGING
+        image: *baseMigrator
+        runs-on: [ self.hosted, migrator.postgres.staging ]
+        deployment: migrator-staging
+        trigger: manual
+        script:
+          - migrate -path ./scripts/migrations/ -database "postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_HOST:5432/affordability?sslmode=require" up
+        services:
+          - docker
+    - step: &execute-migration-prod
+        name: Migration PROD
+        image: *baseMigrator
+        runs-on: [ self.hosted, migrator.postgres.prod ]
+        deployment: migrator-production
+        trigger: manual
+        script:
+          - migrate -path ./scripts/migrations/ -database "postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_HOST:5432/affordability?sslmode=require" up
+        services:
+          - docker
+    - step: &save-and-push-helm-chart
+        name: Save & Push Helm Chart
+        image: *baseAzure
+        script:
+          - /bin/bash ./scripts/bash/pipeline-helm-push.sh
+    - step: &deploy-develop
+        name: Deploy to Develop
+        image: *baseAzure
+        deployment: develop
+        script:
+          - /bin/bash ./scripts/bash/pipeline-deploy.sh
+    - step: &deploy-staging
+        name: Deploy to Staging
+        image: *baseAzure
+        deployment: staging
+        script:
+          - /bin/bash ./scripts/bash/pipeline-deploy.sh
+    - step: &deploy-production
+        name: Deploy to Production
+        image: *baseAzure
+        deployment: production
+        script:
+          - /bin/bash ./scripts/bash/pipeline-deploy.sh //production
+
+
+clone:
+  depth: full
+
+pipelines:
+
+  pull-requests:
+    '**': # this runs as default for any branch not elsewhere defined
+      - step: *compile-and-test
+
+  tags:
+
+    'env-*':
+      - parallel:
+          - step: *setEnvVariablesDev
+          - step: *setEnvVariablesStaging
+          - step: *setEnvVariablesProd
+
+    'v*.*.*':
+      - step: *compile-and-test
+      
+      - parallel:
+        - step: *docker-image
+        - step: *save-and-push-helm-chart
+
+      - step: *execute-migration-dev
+      - step: *deploy-develop
+#      - step: *run-acceptance-tests
+
+      - step: *execute-migration-staging
+      - step: *deploy-staging
+
+      - step: *execute-migration-prod
+      - step: *deploy-production

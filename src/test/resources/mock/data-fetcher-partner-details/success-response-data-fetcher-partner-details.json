@@ -1,0 +1,30 @@
+{
+  "status": 200,
+  "name": "be__data_fetcher_oracle",
+  "version_api": "1",
+  "version_code": "1.3.0",
+  "hostname": "http://be-data-fetcher-oracle.internal.dev.premfina.com",
+  "path": "/v1/clients/TPFUAT2/queries/first_partner_details_for_commercial_agreement/execute",
+  "uuid_instance": null,
+  "id_request": 5,
+  "timestamp_request": "2022-07-29T14:29:05.864814Z",
+  "messages": [],
+  "data": [
+    {
+      "agreement_number": "000110407",
+      "person_forenames": "SOMESOLE",
+      "person_surname": "SOMETRADER",
+      "styled": "MR SOMETRADER",
+      "date_of_birth": "1980-01-01 00:00:00",
+      "email_address": null,
+      "house_name": "TEST MANOR",
+      "house_number": "22",
+      "street_name": "TEST DRIVE",
+      "post_town": "TESTTOWN",
+      "locality": null,
+      "postal_code": "TE1 5TW",
+      "country": 1
+    }
+  ],
+  "version_core": "2.16.4"
+}

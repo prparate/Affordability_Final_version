@@ -1,0 +1,1 @@
+UPDATE report_data SET is_regulated = NULL;

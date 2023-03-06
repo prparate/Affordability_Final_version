@@ -1,0 +1,8 @@
+package com.affordability.service.datafetcher;
+
+import com.affordability.service.datafetcher.firstPartnerForCommercialAgreement.response.PartnerDetailsForCommercialAgreementQueryResponse;
+
+public interface IPartnerDetailsForCommercialAgreement {
+
+	PartnerDetailsForCommercialAgreementQueryResponse getFirstPartnerDetailsForCommercialAgreement(String agreementNumber);
+}

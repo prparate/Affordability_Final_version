@@ -1,0 +1,57 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  h2:
+    console:
+      enabled: false
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+  jpa:
+    show-sql: ${PF_DATABASE_SHOW_SQL:false}
+    hibernate:
+      ddl-auto: validate
+    database: postgresql
+    open-in-view: false
+    properties:
+      hibernate:
+        types:
+          print:
+            banner: false
+  datasource:
+    url: jdbc:postgresql://${PF_DATABASE_HOSTNAME}:${PF_DATABASE_PORT}/affordability
+    hostname: ${PF_DATABASE_HOSTNAME}
+    port: ${PF_DATABASE_PORT}
+    ssl_mode: ${PF_DATABASE_SSL_MODE}
+    username: ${PF_DATABASE_USERNAME}
+    password: ${PF_DATABASE_PASSWORD}
+info:
+  app:
+    version: ${PF_VERSION}
+
+cra:
+  experian-base-url: ${PF_CRA_EXPERIAN_SERVICE_HOSTNAME}
+  base-url: ${PF_CRA_SERVICE_HOSTNAME}
+  cron-schedule: ${PF_CRA_CRON_SCHEDULE}
+
+data:
+  fetcher:
+    base-url: ${PF_DATA_FETCHER_ORACLE_SERVICE_HOSTNAME}
+
+request:
+  max-attempts: ${REQUEST_MAX_ATTEMPTS}
+  connect-timeout: ${REQUEST_CONNECT_TIMEOUT}
+  read-timeout: ${REQUEST_READ_TIMEOUT}
+  time-process-limit-in-seconds: ${TIME_PROCESS_LIMIT_IN_SECONDS:-1}
+
+premfina:
+  environment:
+    funded-customer: ${FUNDED_CUSTOMER_ENVIRONMENT}
+
+azure:
+  application-insights:
+    instrumentation-key: ${APPINSIGHTS_INSTRUMENTATIONKEY}
+
+effective-disposable-surplus:
+  percent-factor: ${PF_EFFECTIVE_DISPOSABLE_SURPLUS_LIMIT:0.89}

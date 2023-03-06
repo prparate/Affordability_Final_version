@@ -1,0 +1,818 @@
+{
+  "status": 200,
+  "version_api": "v1",
+  "version_code": "v1.0.0",
+  "hostname": "http://10.6.0.5:8027/",
+  "path": "/v1/credit/check",
+  "uuid_instance": "14303a06-fc77-4ea4-a5b0-9234d2c4516e",
+  "id_request": 30441,
+  "datetime_request": "2022-05-30 14:25:15",
+  "data": {
+    "reference_number": {
+      "title": "Check Reference Number",
+      "value": "6E5QJ3SF4Q"
+    },
+    "NDSPCII": {
+      "title": "Consumer Indebtedness Index (NDSPCII)",
+      "value": -2
+    },
+    "E1A07": {
+      "title": "",
+      "value": "1"
+    },
+    "E1D02": {
+      "title": "",
+      "value": "1"
+    },
+    "E1B09": {
+      "title": "",
+      "value": "1"
+    },
+    "NDECC03": {
+      "title": "",
+      "value": "0"
+    },
+    "E1B07": {
+      "title": "",
+      "value": "N"
+    },
+    "E1B08": {
+      "title": "Arrears in Last 6 Months (E1B07)",
+      "value": "N"
+    },
+    "EA1C01": {
+      "title": "CCJ's, IVA or Bankrupcy in Last 6 Years (EA1C01)",
+      "value": "N"
+    },
+    "EA5S01": {
+      "title": "Age (EA5S01)",
+      "value": 79
+    },
+    "EA1D01": {
+      "title": "Outstanding CCJ's (EA1D01)",
+      "value": 0
+    },
+    "EA4Q05": {
+      "title": "NOC (EA4Q05)",
+      "value": "N"
+    },
+    "SPC24": {
+      "title": "CIFAS Reason Code (SPC24)",
+      "value": "N"
+    },
+    "E1A11": {
+      "title": "Months since Most Recent Deiinquent Account (E1A11)",
+      "value": 0
+    },
+    "E1A06": {
+      "title": "Number of months since Most Recent Default CAIS Account went into Default (E1A06)",
+      "value": 0
+    },
+    "E5S051": {
+      "title": "Credit Score (E5S051)",
+      "value": 819
+    },
+    "E1sB10": {
+      "title": "Total Balance of Active CAIS Accounts (Excluding Mortgages) (E1B10)",
+      "value": 0
+    },
+    "E1B11": {
+      "title": "Total Balance of Active CAIS Accounts (Mortgages only) (E1B11)",
+      "value": 0
+    },
+    "E1A01": {
+      "title": "Number of Public Information Records, current and satisfied (E1A01)",
+      "value": 0
+    },
+    "E1A02": {
+      "title": "Total Value of County Court Judgements (CCJ) (E1A02)",
+      "value": 0
+    },
+    "E1A03": {
+      "title": "Number of months since Most Recent Public Information Record started (E1A03)",
+      "value": 0
+    },
+    "A1D02": {
+      "title": "Total Value of outstanding County Court Judgement (CCJ) records (A1D02)",
+      "value": 0
+    },
+    "SPB111": {
+      "title": "Number of active CAIS with balance > \u00a30 (excluding mortgages) (SPB111)",
+      "value": -2
+    },
+    "SPA02": {
+      "title": "Balance of all active CAIS (excluding mortgages) (SPA02)",
+      "value": -2
+    },
+    "SPB323": {
+      "title": "Total monthly Payments on Active Non Revolving CAIS with Balance > \u00a30 (Including Mortgages) (SPB323)",
+      "value": -2
+    },
+    "address_swapped": {
+      "title": "Address Swapped",
+      "value": "No"
+    },
+    "address_auto_fixed": {
+      "title": "Address Auto-Fixed",
+      "value": "No"
+    },
+    "system_request_raw": {
+      "title": "Raw Request",
+      "value": {
+        "Submission": {
+          "Applicants": [
+            {
+              "ApplicantIdentifier": 1,
+              "Person": {
+                "Title": "MR",
+                "Forename": "GRAHAM",
+                "MiddleName": "",
+                "Surname": "DAVID%20TRUEMAN",
+                "DateOfBirth": "1943-03-11",
+                "Age": {
+                  "Years": "",
+                  "Months": ""
+                }
+              },
+              "ApplicantData": {
+                "PersonalDetails": {
+                  "MaritalStatus": "",
+                  "MobileTelNumber": "",
+                  "Dependants": "",
+                  "ResidentialStatus": "",
+                  "EmailAddress": "",
+                  "NatInsuranceNum": "",
+                  "PassportNumber": "",
+                  "CountryOfBirth": ""
+                },
+                "BankDetails": {
+                  "TimeWithBank": {
+                    "Years": "",
+                    "Months": ""
+                  },
+                  "BankSortCode": "",
+                  "BankAccountNumber": "",
+                  "CurrentAccountHeld": "",
+                  "ChequeCardHeld": ""
+                },
+                "EmploymentDetails": {
+                  "GrossAnnualIncome": "50000",
+                  "WorkTelephone": {
+                    "STDCode": "",
+                    "Number": ""
+                  },
+                  "TimeWithEmployer": {
+                    "Years": "",
+                    "Months": ""
+                  },
+                  "EmployerName": "",
+                  "OccupationStatus": "",
+                  "EmploymentStatus": ""
+                },
+                "AdditionalData": {
+                  "DrivingLicenceNumber": "",
+                  "VehicleRegistration": "",
+                  "PlaceOfBirth": "",
+                  "MothersMaidenName": "",
+                  "BirthSurname": ""
+                }
+              }
+            }
+          ],
+          "Locations": [
+            {
+              "LocationIdentifier": 1,
+              "UKLocation": {
+                "Flat": "",
+                "HouseName": "",
+                "HouseNumber": "22",
+                "Street": "Patterdale%20Drive",
+                "District": "",
+                "PostTown": "York",
+                "County": "",
+                "Postcode": "YO305TW",
+                "Country": "UK"
+              }
+            }
+          ],
+          "Residencies": [
+            {
+              "ApplicantIdentifier": 1,
+              "LocationIdentifier": 1,
+              "TimeAt": {
+                "Years": 0,
+                "Months": 0
+              },
+              "Type": "1",
+              "CanBeSearched": "Y"
+            }
+          ],
+          "Application": {
+            "ApplicationType": "PL",
+            "ProductType": "DelphiSelect",
+            "Amount": "1",
+            "SearchConsent": true
+          },
+          "ClientData": {
+            "ClientBranchNumber": "",
+            "ClientRef": "",
+            "JobNumber": "",
+            "ClientAccountNumber": "J3438",
+            "ExperianReference": ""
+          },
+          "ThirdPartyData": {
+            "OptOut": "N",
+            "TransientAssociation": "N",
+            "HHOAllowed": "",
+            "OptOutValidCutOff": "N"
+          },
+          "Options": {
+            "ProductCode": "",
+            "FullFBLRequired": true,
+            "AuthenticatePlusRequired": false,
+            "DetectRequired": false,
+            "TestDatabase": "A"
+          }
+        }
+      }
+    },
+    "system_response_raw": {
+      "title": "Raw Response",
+      "value": {
+        "Response": {
+          "Applicants": [
+            {
+              "ApplicantIdentifier": 1,
+              "Person": {
+                "Title": "MR",
+                "Forename": "GRAHAM",
+                "MiddleName": "",
+                "Surname": "DAVID%20TRUEMAN",
+                "Suffix": "",
+                "Gender": "",
+                "DateOfBirth": "1943-03-11",
+                "FormattedName": "Mr G David%20Trueman",
+                "Age": {
+                  "Years": "79",
+                  "Months": "02"
+                }
+              }
+            }
+          ],
+          "Locations": [
+            {
+              "LocationIdentifier": 1,
+              "UKLocation": {
+                "HouseNumber": "22",
+                "Street": "PATTERDALE%20DRIVE",
+                "PostTown": "YORK",
+                "Postcode": "YO305TW"
+              }
+            }
+          ],
+          "Residencies": [
+            {
+              "ApplicantIdentifier": 1,
+              "LocationIdentifier": 1,
+              "Type": "C",
+              "VRConfirmation": {
+                "Confirmed": "N",
+                "YrsERSP": "00",
+                "YrsERSF": "00"
+              },
+              "CanBeSearched": "Y"
+            }
+          ],
+          "FullConsumerData": {
+            "ConsumerDataSummary": {
+              "SummaryDetails": {
+                "DataOverflow": "N",
+                "PublicInfoSummary": {
+                  "Number": 0
+                },
+                "CAISSummary": {
+                  "Number": 0,
+                  "WorstCurrent": "0",
+                  "WorstHistorical": "0",
+                  "TotalBalance": "-",
+                  "CAISPrevSearches": {
+                    "NumberUpTo3Months": 0,
+                    "Num3To6Months": 0,
+                    "Num6To12Months": 0,
+                    "TotalNumber": 0
+                  },
+                  "GoneAway": "N"
+                },
+                "SummaryFlags": {
+                  "CIFAS": "N",
+                  "CML": "N",
+                  "PreviousOccupant": "N",
+                  "NoConfirmAtPrevLoc": "N",
+                  "Arrangement": "N",
+                  "ReportedDeceased": "N",
+                  "ReportedGoneAway": "N",
+                  "ClaimedOnCreditIns": "N",
+                  "DebtManagement": "N",
+                  "AccountQuery": "N",
+                  "Recourse": "N",
+                  "VoluntaryTerm": "N",
+                  "PartSettle": "N",
+                  "DebtAssign": "N",
+                  "OwnAccount": "N",
+                  "OwnSearch": "N",
+                  "PreviousLocation": "N",
+                  "AdditionalLocation": "N",
+                  "ForwardLocation": "N"
+                },
+                "NoCCount": "0",
+                "LocationConfirmCnt": 1,
+                "LocationConfirm": [
+                  {
+                    "Location": "C",
+                    "Level": "6"
+                  }
+                ]
+              }
+            },
+            "ConsumerData": {
+              "VotersRollLocation": [
+                {
+                  "LocationIndicator": "C",
+                  "ApplicantIndicator": "1",
+                  "VRollStreetDetails": [
+                    {
+                      "StreetMatchLevel": "4",
+                      "InformationSource": "A",
+                      "MOSAICCode": "0",
+                      "PAFDistrictNumber": "241",
+                      "SegmentIDNumber": "1",
+                      "ACORNCode": "99",
+                      "BatchNumber": "001",
+                      "VRLocation": {
+                        "Street": "PATTERDALE DRIVE",
+                        "PostTown": "YORK",
+                        "Postcode": "YO305TW"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "VotersRollPerson": [
+                {
+                  "LocationIndicator": "C",
+                  "ApplicantIndicator": "1",
+                  "VRollPersonDetails": [
+                    {
+                      "MatchDetails": {
+                        "HouseMatchLevel": "4",
+                        "BureauRefCategory": "5",
+                        "MatchTo": "9"
+                      },
+                      "InformationSource": "A",
+                      "Sex": "M",
+                      "SegmentIDNumber": 1,
+                      "SurnameReg": "1998",
+                      "DatesRegLeft": "081998",
+                      "Name": {
+                        "Forename": "GRAHAM",
+                        "MiddleName": "SONALBEN NARSIN",
+                        "Surname": "DAVID TRUEMAN"
+                      },
+                      "HouseNumber": "22"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ControlDetails": {
+              "AccountNumber": "J3438",
+              "CAISSource": "874",
+              "CMLCode": "000",
+              "SeeVoters": "Y",
+              "SeeAssociations": "Y",
+              "SeePublicInfo": "Y",
+              "SeeCIFAS": "N",
+              "SeeCAIS": "Y",
+              "SeeCML": "N",
+              "SeeCAPS": "Y",
+              "SeeAddrLinks": "Y",
+              "SearchDate": "2022-05-30",
+              "SearchTime": "142516",
+              "SeeGAIN": "N",
+              "SeeDirectors": "Y"
+            }
+          },
+          "ConsumerSummary": {
+            "PremiumValueData": {
+              "TPD": {
+                "NDHHO": "Y"
+              },
+              "CII": {
+                "NDSPCII": -2,
+                "NDSPACII": -2
+              },
+              "Mosaic": {
+                "EA4M01": -9999,
+                "EA4M02": -9999,
+                "EA4M03": -9999,
+                "EA4M04": -9999,
+                "EA4M05": -9999,
+                "EA4M06": -9999,
+                "EA4M07": -9999,
+                "EA4M08": 0,
+                "EA4M09": 0,
+                "EA4M10": 0,
+                "EA4M11": 0,
+                "EA4M12": 0,
+                "EA4T01": -999,
+                "EA5T01": -999,
+                "EA5T02": -999,
+                "NDG01": 5,
+                "EA4N01": -9999,
+                "EA4N02": -9999,
+                "EA4N03": -9999,
+                "EA4N04": -9999,
+                "EA4N05": -9999,
+                "NDG02": 810,
+                "NDG03": 14,
+                "NDG04": 690,
+                "NDG05": 38,
+                "NDG06": 345,
+                "NDG07": 690,
+                "NDG08": 345,
+                "NDG09": 690,
+                "NDG10": 0,
+                "NDG11": 345,
+                "NDG12": 2759
+              },
+              "Scoring": {
+                "NDSI21": "01BEN",
+                "E5S01": "1",
+                "E5S02": "3",
+                "E5S041": "01",
+                "E5S051": 819,
+                "E5S042": 0,
+                "E5S052": -999,
+                "E5S043": 0,
+                "E5S053": -999,
+                "NDHHOSCORE": 0,
+                "NDVALSCORE": 0
+              },
+              "AddrLink": {
+                "NDLNK01": "N"
+              },
+              "Director": {
+                "NDDIRSP": "N",
+                "NDDIRSPA": "N"
+              },
+              "AgeDoB": {
+                "NDDOB": "43-03-11",
+                "EA5S01": 79,
+                "EA4S01": 0,
+                "EA4S03": 0,
+                "EA4S05": 0,
+                "EA4S07": 0
+              },
+              "AdditDelphiBlocks": {
+                "Utilisationblock": {
+                  "SPA01": -2,
+                  "SPA02": -2,
+                  "SPA03": -2,
+                  "SPA04": -2,
+                  "SPA05": -2,
+                  "SPA06": -2,
+                  "SPA07": -2,
+                  "SPA08": -2,
+                  "SPA09": -2,
+                  "SPA10": -2,
+                  "SPB111": -2,
+                  "SPB112": -2,
+                  "SPB113": -2,
+                  "SPB114": -2,
+                  "SPB115": -2,
+                  "SPB116": -2,
+                  "SPB117": -2,
+                  "SPB218": 9999,
+                  "SPB219": 9999,
+                  "SPB220": 9999,
+                  "SPB221": 9999,
+                  "SPB322": -2,
+                  "SPB323": -2,
+                  "SPC24": "N",
+                  "SPD25": 0,
+                  "SPE126": -2,
+                  "SPE127": -2,
+                  "SPE128": -2,
+                  "SPF129": -2,
+                  "SPF130": -2,
+                  "SPF131": -2,
+                  "SPF232": -2,
+                  "SPF233": -2,
+                  "SPF334": 9999,
+                  "SPF335": 9999,
+                  "SPF336": 9999,
+                  "SPG37": -2,
+                  "SPG38": -2,
+                  "SPH39": 0,
+                  "SPH40": 0,
+                  "SPH41": 0,
+                  "SPCIICHECKDIGIT": 0,
+                  "SPAA01": -2,
+                  "SPAA02": -2,
+                  "SPAA03": -2,
+                  "SPAA04": -2,
+                  "SPAA05": -2,
+                  "SPAA06": -2,
+                  "SPAA07": -2,
+                  "SPAA08": -2,
+                  "SPAA09": -2,
+                  "SPAA10": -2,
+                  "SPAB111": -2,
+                  "SPAB112": -2,
+                  "SPAB113": -2,
+                  "SPAB114": -2,
+                  "SPAB115": -2,
+                  "SPAB116": -2,
+                  "SPAB117": -2,
+                  "SPAB218": 9999,
+                  "SPAB219": 9999,
+                  "SPAB220": 9999,
+                  "SPAB221": 9999,
+                  "SPAB322": -2,
+                  "SPAB323": -2,
+                  "SPAC24": "N",
+                  "SPAD25": 0,
+                  "SPAE126": -2,
+                  "SPAE127": -2,
+                  "SPAE128": -2,
+                  "SPAF129": -2,
+                  "SPAF130": -2,
+                  "SPAF131": -2,
+                  "SPAF232": -2,
+                  "SPAF233": -2,
+                  "SPAF334": 9999,
+                  "SPAF335": 9999,
+                  "SPAF336": 9999,
+                  "SPAG37": -2,
+                  "SPAG38": -2,
+                  "SPAH39": 0,
+                  "SPAH40": 0,
+                  "SPAH41": 0,
+                  "SPACIICHECKDIGIT": 0
+                }
+              }
+            },
+            "Summary": {
+              "ElectoralRoll": {
+                "E4Q01": 3,
+                "E4Q02": 3,
+                "E4Q03": 0,
+                "E4Q04": 0,
+                "E4Q05": 5,
+                "E4Q06": 5,
+                "E4Q07": 0,
+                "E4Q08": 0,
+                "E4Q09": 5,
+                "E4Q10": 5,
+                "E4Q11": 0,
+                "E4Q12": 0,
+                "E4Q13": 5,
+                "E4Q14": 5,
+                "E4Q15": 0,
+                "E4Q16": 0,
+                "E4Q17": "5",
+                "E4Q18": "5",
+                "E4R01": 1,
+                "E4R02": "YO305TW",
+                "EA4R01PM": 0,
+                "EA4R01CJ": 0,
+                "EA4R01PJ": 0,
+                "NDERL01": 2,
+                "NDERL02": 2,
+                "EA2Q01": 3,
+                "EA2Q02": 0,
+                "NDERLMACA": "S",
+                "EA5U01": 1,
+                "EA5U02": 0
+              },
+              "PublicInfo": {
+                "E1A01": 0,
+                "E1A02": 0,
+                "E1A03": 0,
+                "EA1C01": "N",
+                "EA1D01": 0,
+                "EA1D02": 0,
+                "EA1D03": 0,
+                "E2G01": 0,
+                "E2G02": 0,
+                "E2G03": 0,
+                "EA2I01": "N",
+                "EA2J01": 0,
+                "EA2J02": 0,
+                "EA2J03": 0,
+                "EA4Q06": "N",
+                "SPBRPRESENT": "N",
+                "SPABRPRESENT": "N"
+              },
+              "CAIS": {
+                "E1A04": 0,
+                "E1A05": 0,
+                "E1A06": 0,
+                "E1A07": 0,
+                "E1A08": 0,
+                "E1A09": 0,
+                "E1A10": 0,
+                "E1A11": 0,
+                "E1B01": 0,
+                "E1B02": 0,
+                "E1B03": "N",
+                "E1B04": 0,
+                "E1B05": "N",
+                "E1B06": 0,
+                "E1B07": "N",
+                "E1B08": "N",
+                "E1B09": 0,
+                "E1B10": 0,
+                "E1B11": 0,
+                "E1B12": 0,
+                "E1B13": 0,
+                "NDECC01": 0,
+                "NDECC02": 0,
+                "NDECC03": 0,
+                "NDECC04": 0,
+                "NDECC07": 0,
+                "NDECC08": 0,
+                "E1C01": "N",
+                "E1C02": 0,
+                "E1C03": 0,
+                "E1C04": 0,
+                "E1C05": 0,
+                "E1C06": 0,
+                "EA1B02": 0,
+                "E1D01": 0,
+                "E1D02": 0,
+                "E1D03": 0,
+                "E1D04": 0,
+                "NDHAC01": 0,
+                "NDHAC02": 0,
+                "NDHAC03": 0,
+                "NDHAC04": 0,
+                "NDHAC05": 0,
+                "NDHAC09": 0,
+                "NDINC01": 0,
+                "EA1F02": "N",
+                "EA1F03": "N",
+                "E2G04": 0,
+                "E2G05": 0,
+                "E2G06": 0,
+                "E2G07": 0,
+                "E2G08": 0,
+                "E2G09": 0,
+                "E2G10": 0,
+                "E2G11": 0,
+                "E2H01": 0,
+                "E2H02": 0,
+                "E2H03": "N",
+                "E2H04": 0,
+                "E2H05": "N",
+                "E2H06": 0,
+                "E2H07": "N",
+                "E2H08": "N",
+                "E2H09": 0,
+                "E2H10": 0,
+                "E2H11": 0,
+                "E2H12": 0,
+                "E2H13": 0,
+                "NDECC05": 0,
+                "NDECC09": 0,
+                "NDECC10": 0,
+                "E2I01": "N",
+                "E2I02": 0,
+                "E2I03": 0,
+                "E2I04": 0,
+                "E2I05": 0,
+                "E2I06": 0,
+                "EA2H02": 0,
+                "E2J01": 0,
+                "E2J02": 0,
+                "E2J03": 0,
+                "E2J04": 0,
+                "NDHAC10": 0,
+                "NDHAC06": 0,
+                "NDHAC07": 0,
+                "NDHAC08": 0,
+                "NDINC02": 0,
+                "EA2L02": "N",
+                "EA2L03": "N",
+                "NDECC06": 0,
+                "NDINC03": 0
+              },
+              "CAPS": {
+                "E1E01": 0,
+                "E1E02": 0,
+                "EA1B01": 0,
+                "NDPSD01": 0,
+                "NDPSD02": 0,
+                "NDPSD03": 0,
+                "NDPSD04": 0,
+                "NDPSD05": 0,
+                "NDPSD06": 0,
+                "EA1E01": 0,
+                "EA1E02": 0,
+                "EA1E03": 0,
+                "EA1E04": 0,
+                "E2K01": 0,
+                "E2K02": 0,
+                "EA2H01": 0,
+                "NDPSD07": 0,
+                "NDPSD08": 0,
+                "NDPSD09": 0,
+                "NDPSD10": 0,
+                "EA2K01": 0,
+                "EA2K02": 0,
+                "EA2K03": 0,
+                "EA2K04": 0,
+                "NDPSD11": 0
+              },
+              "CIFAS": {
+                "EA1A01": "N",
+                "EA2G01": "N",
+                "EA4P01": "N",
+                "EA4P02": 0
+              },
+              "CML": {
+                "EA1C02": "N",
+                "EA2I02": "N"
+              },
+              "GAIN": {
+                "EA1G01": "N",
+                "EA1G02": "N",
+                "EA2M01": "N",
+                "EA2M02": "N"
+              },
+              "NOC": {
+                "EA4Q07": "N",
+                "EA4Q08": "N",
+                "EA4Q09": "N",
+                "EA4Q10": "N",
+                "EA4Q11": "N",
+                "EA4Q01": "N",
+                "EA4Q02": "N",
+                "EA4Q03": "N",
+                "EA4Q04": "N",
+                "EA4Q05": "N"
+              },
+              "TPD": {
+                "NDOPTOUT": "N"
+              }
+            }
+          },
+          "ClientData": {
+            "ClientAccountNumber": "J3438",
+            "ClientBranchNumber": "",
+            "ClientRef": "",
+            "JobNumber": "",
+            "ExperianReference": "6E5QJ3SF4Q"
+          },
+          "ThirdPartyData": {
+            "OutcomeCode": "01",
+            "OptOut": "N",
+            "TransientAssociation": "N",
+            "OptOutValidCutOff": "N"
+          }
+        },
+        "Metrics": {
+          "ProcessStarted": "2022-05-30T13:25:16.643Z",
+          "ProcessEnded": "2022-05-30T13:25:16.988Z",
+          "TimeTakeninMs": 345,
+          "Steps": [
+            {
+              "Name": "Authorisation",
+              "TimeTakeninMs": 23
+            },
+            {
+              "Name": "Validation",
+              "TimeTakeninMs": 0
+            },
+            {
+              "Name": "TransformationIn",
+              "TimeTakeninMs": 2
+            },
+            {
+              "Name": "ServiceCall",
+              "TimeTakeninMs": 307
+            },
+            {
+              "Name": "TransformationOut",
+              "TimeTakeninMs": 7
+            }
+          ]
+        }
+      }
+    },
+    "system_response_from_cache": {
+      "title": "Data Was Loaded from Cache",
+      "value": "No"
+    }
+  }
+}

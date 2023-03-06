@@ -1,0 +1,11 @@
+
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = local.affordability.premfina.com
+DNS.2 = develop.affordability.premfina.com
+DNS.3 = staging.affordability.premfina.com
+IP = 0.0.0.0

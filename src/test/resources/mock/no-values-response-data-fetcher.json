@@ -1,0 +1,14 @@
+{
+  "status": 200,
+  "name": "be__data_fetcher_oracle",
+  "version_api": "v1",
+  "version_code": "1.2.0",
+  "hostname": "http://be-data-fetcher-oracle.internal.dev.premfina.com",
+  "path": "/v1/clients/TPFUAT2_ec91cc70-5fa1-4301-8bfe-06ccc0eed5aa/queries/agreements_by_agreement_numbers/execute",
+  "uuid_instance": null,
+  "id_request": 8998,
+  "datetime_request": "2022-06-01 16:08:29",
+  "messages": [],
+  "data": [],
+  "version_core": "1.9.9"
+}
